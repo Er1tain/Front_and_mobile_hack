@@ -1,5 +1,5 @@
-import React from "react";
-import { IonPage } from "@ionic/react";
+import React, { useEffect } from "react";
+import { IonPage, useIonRouter } from "@ionic/react";
 import styled from 'styled-components';
 import logo from '../assets/images/logo.png';
 
@@ -17,6 +17,15 @@ const Image = styled.img`
 `
 
 export default function Welcome() {
+    const nav = useIonRouter();
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            nav.push('/reg');
+            location.reload();
+        }, 3500)
+    }, [])
+
     return (
         <Page>
             <Image src={logo} />
