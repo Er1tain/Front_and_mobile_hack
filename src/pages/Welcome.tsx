@@ -7,12 +7,19 @@ const Page = styled(IonPage)`
     width: 100%;
     height: 100%;
     background-color: #669DFB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+const Image = styled.img`
+    pointer-events: none;
+    width: 20rem;
 `
 
 export default function Welcome() {
     return (
         <Page>
-            <img src={logo} />
+            <Image src={logo} />
         </Page>
     )
 }
